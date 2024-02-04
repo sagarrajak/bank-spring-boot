@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
 
@@ -20,11 +21,8 @@ public class Accounts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "owner", nullable = false)
-    private String owner;
-
     @Column(name = "balance", nullable = false)
-    private Long balance;
+    private BigDecimal balance;
 
     @Column(name = "currency", nullable = false)
     private String currency;
